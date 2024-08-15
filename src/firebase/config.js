@@ -9,12 +9,12 @@ import { getAuth } from 'firebase/auth'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC99UZ88KKqHzGcr9hECmxvxABsGglw704",
-  authDomain: "proj6-ce4f9.firebaseapp.com",
-  projectId: "proj6-ce4f9",
-  storageBucket: "proj6-ce4f9.appspot.com",
-  messagingSenderId: "972237565230",
-  appId: "1:972237565230:web:f7ee5dd6b4c1722c025ebf"
+// here your configuration for firebase will come eg :-  apiKey: "xyz",
+  // authDomain: "xyz",
+  // projectId: "xyz,
+  // storageBucket: "xyz",
+  // messagingSenderId: "xyz",
+  // appId: "xyz"
   };
   
   // Initialize Firebase

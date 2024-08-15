@@ -3,7 +3,7 @@ const { OAuth2Client } = require('google-auth-library')
 // import jwt from 'jsonwebtoken';
 const jwt = require('jsonwebtoken')
 
-const client = new OAuth2Client('972237565230-1a7mfasusvter9hkn3hhq96j18q0ri4c.apps.googleusercontent.com');
+const client = new OAuth2Client(REACT_APP_GOOGLE_CLIENT_ID);
 
 const auth = async (req, res, next) => {
     try {
@@ -16,7 +16,7 @@ const auth = async (req, res, next) => {
     if (googleToken) {
       const ticket = await client.verifyIdToken({
         idToken: token,
-        audience: '972237565230-1a7mfasusvter9hkn3hhq96j18q0ri4c.apps.googleusercontent.com',
+        audience: REACT_APP_GOOGLE_CLIENT_ID,
       });
       const payload = ticket.getPayload();
       req.user = {

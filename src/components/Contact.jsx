@@ -26,8 +26,8 @@ const Contact = () => {
         <div className='contact-information'>
           <h1><b>OFFICE INFORMATION</b></h1>
           <p className='contact-information-p'>VRTOUR VIRTUAL PILGRIMAGE</p>
-          <p className='contact-information-p'>456 VIGZAG ROAD, SECTOR 10 CYBER CITY,</p>
-          <p className='contact-information-p'>DELHI - 110012</p>
+          <p className='contact-information-p'>kasarvadavli ROAD, A.P shah institute of Technology,</p>
+          <p className='contact-information-p'>MUMBAI - 400081</p>
           <p className='contact-information-p'>INDIA</p>    
           <div className='contact-emerge-call'>
             

@@ -41,7 +41,7 @@ import {
     useEffect(() => {
       if (pilgrim) {
         // const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${pilgrim.lng},${pilgrim.lat}.json?access_token=${process.env.REACT_APP_MAP_TOKEN}`;
-        const url = `https://api.maptiler.com/geocoding/v1/reverse?lat=${pilgrim.lat}&lon=${pilgrim.lng}&key=${'tRqjZjhKcJr1uachzPuM'}`;
+        const url = `https://api.maptiler.com/geocoding/v1/reverse?lat=${pilgrim.lat}&lon=${pilgrim.lng}&key=${'xyz'}`;//your key hair
         fetch(url)
           .then((response) => {
             return response.json()})

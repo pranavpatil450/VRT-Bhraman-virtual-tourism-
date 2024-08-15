@@ -15,10 +15,7 @@ import { Marker} from 'react-maplibre-gl'
 import { useValue } from '../App'
 
 const Location = () => {
-    // const Map = ReactMapboxGl({
-    //   accessToken:
-    //     'pk.eyJ1IjoiZmFicmljOCIsImEiOiJjaWc5aTV1ZzUwMDJwdzJrb2w0dXRmc2d0In0.p6GGlfyV-WksaDV_KdN27A'
-    // });
+    
 const{state:{location:{lng,lat}} , dispatch} = useValue();
 const mapContainer = useRef(null)
 const markerRef = useRef(null);
@@ -110,21 +107,7 @@ const handleAddClick = () =>{
             height:650,
             position:'relative'
         }}>
-    {/* <ReactMapGL 
-    mapboxAccessToken='pk.eyJ1Ijoiam9obmRvZTJlbWFpbCIsImEi0iJja3o30G9tY3owMXZvMnBycDM5bzBwNXlyIn0.a0v4orDUMi0PK_qk9UqaCw'
-    mapStyle='mapbox://styles/mapbox/streets-v11'
-    ></ReactMapGL> */}
-{/* <Map
-  style="mapbox://styles/mapbox/streets-v9"
-  containerStyle={{
-    height: '100vh',
-    width: '100vw'
-  }}
->
-  <Layer type="symbol" id="marker" layout={{ 'icon-image': 'marker-15' }}>
-    <Feature coordinates={[-0.481747846041145, 51.3233379650232]} />
-  </Layer>
-</Map>; */}
+   
 
 
 <div className='Search-container' style={{ position: 'absolute', top: 10, left: 10, zIndex: 999 }}>

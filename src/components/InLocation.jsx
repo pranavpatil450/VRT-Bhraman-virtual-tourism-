@@ -14,10 +14,7 @@ import { Marker} from 'react-maplibre-gl'
 import { useValue } from '../App'
 
 const Location = () => {
-    // const Map = ReactMapboxGl({
-    //   accessToken:
-    //     'pk.eyJ1IjoiZmFicmljOCIsImEiOiJjaWc5aTV1ZzUwMDJwdzJrb2w0dXRmc2d0In0.p6GGlfyV-WksaDV_KdN27A'
-    // });
+    
 const{state:{location:{lng,lat}} , dispatch} = useValue();
 const mapContainer = useRef(null)
 const markerRef = useRef(null);
