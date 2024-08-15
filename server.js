@@ -283,8 +283,8 @@ app.post('/submit-meeting-form', async (req, res) => {
     guideEmail = 'guide1@example.com';
   } else if (guide === 'Gautam') {
     guideEmail = 'guide2@example.com';
-  } else if (guide === 'Pratik') {
-    guideEmail = 'pranavpatil191@apsit.edu.in';
+  } else if (guide === 'Pranav') {             
+    guideEmail = 'guide3@example.com';           //here commit the email of the guides
   }
 
 
@@ -384,68 +384,3 @@ app.get('/registered-dates', async (req, res) => {
 
 app.use('/user' , userRouter)
 app.use('/pilgrim', pilgrimRouter)
-
-
-app.post('/donate' , async(req,res) => {
-try{
-    const instance = new Razorpay({
-      key_id: "rzp_test_wW80r76Ae0rTbO",
-      key_secret: "w8oFKU5YtUPsmSq5NPvwE88W"
-    })
-
-    const {order_id , amount , currency , payment_capture} = req.body;
-
-    const options = {
-      amount:amount,
-      currency:currency,
-      receipt:order_id,
-      payment_capture:payment_capture,
-    };
-
-    const donate = await instance.orders.create(options);
-    if(!donate) return res.status(500).send("somenthing went wrong");
-
-}catch(err){
-  console.log(err)
-}
-})
-
-
-app.post("/card-detail" , async (req,res,next) => {
-  try{
-    const instance = new Razorpay({
-      key_id: "rzp_test_wW80r76Ae0rTbO",
-      key_secret: "w8oFKU5YtUPsmSq5NPvwE88W"
-  });
-  const { id } = req.body;
-  const order = await instance.payments.fetch(id);
-  if(!order) return res.status(500).send("something occured");
-
-  res.status(200).json({ success: true,data: order })
-}
-catch(err){
-    console.log(err)
-  }
-})
-
-
-// const razorpay = new Razorpay({
-//   key_id: 'rzp_test_wW80r76Ae0rTbO',
-//   key_secret: 'w8oFKU5YtUPsmSq5NPvwE88W',
-// });
-
-// app.post('/api/razorpay', async (req, res) => {
-//   const { amount } = req.body;
-//   const options = {
-//     amount: amount * 100,
-//     currency: 'INR',
-//     receipt: 'receipt_order_74394',
-//   };
-//   try {
-//     const response = await razorpay.orders.create(options);
-//     res.json(response);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).send('Failed to create Razorpay order');
-//   }
-// });
